@@ -34,7 +34,9 @@ def test_history():
         multiplication Calculations worked by checking their functions 
     '''
     history = Calculations.get_history()
-    assert history[0].get_result() == 4 and history[2].get_result() == 15
+    assert calculator.add(1,3) == 4
+    assert calculator.subtract(6, 3) == 3
+    assert history[-2].get_result() == 4 and history[-1].get_result() == 3
 
 def test_clear_history():
     ''' Tests the function that clears the history '''
