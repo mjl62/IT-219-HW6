@@ -23,7 +23,6 @@ class SubtractCommand(Command):
             result = calculator.subtract(result, num)
         print(result)
         
-        
     def menuText() -> str:
         return "Subtracts one or more numbers from the first number."
     
