@@ -11,7 +11,7 @@ class App:
         self.commandHandler = CommandHandler()
         if not load_dotenv():
             # do something
-            print("No .env file found, running in some obscure mode, have fun asshole!")
+            print("No .env file found, running in some mode I havent decided yet")
         self.load_plugins()
 
     def load_plugins(self):
