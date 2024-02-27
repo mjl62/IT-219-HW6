@@ -1,3 +1,5 @@
+
+"""
 import sys
 from typing import Callable, cast
 from decimal import Decimal
@@ -30,3 +32,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    """

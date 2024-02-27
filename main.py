@@ -1,3 +1,6 @@
+
+from app import App
+
 import sys
 from calculator.calculator import Calculator
 from decimal import Decimal, InvalidOperation
@@ -33,5 +36,7 @@ def main():
     _, a, b, operation = sys.argv
     calculate_and_print(a, b, operation)
 
-if __name__ == '__main__':
-    main()
+
+if __name__ == "__main__":
+    # create an instance of App and run the start function
+    app = App().start()
