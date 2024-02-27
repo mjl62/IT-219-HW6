@@ -2,10 +2,13 @@ from app.command import Command
 from typing import List
 from decimal import Decimal, InvalidOperation
 from calculator.calculator import Calculator
+from multiprocessing import Queue
+import time
 
 class AddCommand(Command):
 
-    def execute(args: List):
+    def execute(args: List, queue: Queue):
+        queue.put(0)
         calculator = Calculator()
         # Convert args to decimal
         if (len(args) == 0):
@@ -16,7 +19,7 @@ class AddCommand(Command):
         except InvalidOperation:
             print(AddCommand.usage())
             return
-        result = 0
+        result = args.pop(0)
         for num in args:
             result = calculator.add(result, num)
         print(result)
@@ -25,4 +28,4 @@ class AddCommand(Command):
         return "Adds two or more numbers."
     
     def usage() -> str:
-        return "Usage: add <integer> <integer>"
+        return "Usage: add <decimal> <decimal>"
