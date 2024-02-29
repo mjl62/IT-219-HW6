@@ -12,7 +12,6 @@ class Command(ABC):
     '''
     @abstractmethod
     def execute(args: List, queue: Queue):
-        
         pass
 
     @abstractmethod
