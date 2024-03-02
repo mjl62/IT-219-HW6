@@ -1,7 +1,5 @@
 from app.command import Command
 from typing import List
-import os
-import signal
 from multiprocessing import Queue
 
 class ExitCommand(Command):
