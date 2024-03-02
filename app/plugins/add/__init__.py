@@ -3,7 +3,6 @@ from typing import List
 from decimal import Decimal, InvalidOperation
 from calculator.calculator import Calculator
 from multiprocessing import Queue
-import time
 
 class AddCommand(Command):
 

@@ -30,6 +30,7 @@ class App:
                     except TypeError:
                         continue
         os.environ["HELP_MENU"] = self.commandHandler.createHelpMenu()
+        print(os.environ["HELP_MENU"])
         
 
     def start(self):
