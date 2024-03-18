@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from multiprocessing import Queue, Process
 from typing import List
+import logging
 
 class Command(ABC):
 
@@ -26,6 +27,7 @@ class CommandHandler:
 
     def registerCommand(self, command_name: str, command: Command):
         self.commands[command_name] = command
+        logging.info(f"Registered command: '{command_name}'")
 
     def createHelpMenu(self):
         for command in self.commands:
